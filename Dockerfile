@@ -1,6 +1,6 @@
 FROM python:3.9.5-slim-buster
 
-MAINTAINER Josh Kosloski "josh@darkfox.io"
+MAINTAINER Josh K "josh@darkfox.io"
 
 COPY ./requirements.txt /app/requirements.txt
 
