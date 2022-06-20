@@ -1,0 +1,186 @@
+:root, .dark{
+    --header: #1d1e21;
+    --foreground: #25262a;
+    --post: #3f3f3f;
+    --highlighted: #454545;
+    --text: #eeeeee;
+    --accent: #00a71c;
+    --orange: #e04010;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('./Inter.var.woff2') format('woff2-variations');
+	font-style: normal;
+}
+
+body{
+    margin: 0;
+    background-color: var(--foreground);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+}
+
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.is-darkgray{
+    background-color: var(--header);
+    color: var(--text);
+}
+
+main{
+    padding: 60px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.maincolumn{
+    max-width: 750px;
+    border-radius: 5px;
+}
+
+.site-title{
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.logo-accent{
+    color: var(--accent);
+}
+
+.budget-title{
+    margin-bottom: -20px;
+    justify-content: center;
+    display: flex;
+    font-size: .8em;
+}
+
+.budget-rate{
+    margin-top: -25px;
+    justify-content: center;
+    display: flex;
+    font-size: .9em;
+}
+
+.budget-rate:hover{
+    color: var(--text);
+}
+
+.budget{
+    font-size: 6em;
+    font-weight: normal;
+    letter-spacing: -5px;
+}
+
+.budget-options{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.budget-options a{
+    border: 1px solid white;
+    padding: 20px 10px 20px 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.budget-options a:first-child{
+    margin-right: 20px;
+}
+
+.budget-options a:hover{
+    text-decoration: none;
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+.transactions{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.transactions table{
+    width: 100%;
+    background-color: var(--foreground);
+    color: var(--text);
+}
+
+.transactions table tr td{
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.amount{
+    width: 33%;
+}
+
+.separator{
+    color: #bbb;
+}
+
+footer{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-card-head{
+    background-color: var(--header);
+    border-bottom: none;
+}
+
+.modal-card-title{
+    color: #eee;
+}
+
+.modal-card-foot{
+    background-color: var(--header);
+    border-top: none;
+}
+
+.modal-card-body{
+    background-color: var(--foreground);
+}
+
+.is-darkgray::placeholder {
+    color: var(--text);
+}
+
+.is-darkgray::-webkit-input-placeholder{
+    color: #555;
+}
+
+.label{
+    color: var(--text);
+}

@@ -1,0 +1,221 @@
+:root, .dark{
+    --header: #1d1e21;
+    --foreground: #25262a;
+    --post: #3f3f3f;
+    --highlighted: #454545;
+    --text: #eeeeee;
+    --accent: #00a71c;
+    --orange: #e04010;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('./Inter.var.woff2') format('woff2-variations');
+	font-style: normal;
+}
+
+body{
+    margin: 0;
+    background-color: var(--foreground);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    min-height: 89vh;
+}
+
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+nav{
+    min-height: 35px;
+    background-color: var(--header);
+    top: 0;
+    padding: 0 20px 0 20px;
+    width: 100%;
+    position: fixed;
+}
+
+main{
+    padding: 60px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.maincolumn{
+    max-width: 750px;
+    border-radius: 5px;
+}
+
+.site-title{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.logo-accent{
+    color: var(--accent);
+}
+
+.budget-title{
+    margin-top: 30px;
+    margin-bottom: -20px;
+    justify-content: center;
+    display: flex;
+    font-size: .8em;
+}
+
+.budget{
+    font-size: 9em;
+    font-weight: bold;
+}
+
+.budget-options{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.budget-options a{
+    border: 1px solid white;
+    padding: 20px 10px 20px 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.budget-options a:first-child{
+    margin-right: 20px;
+}
+
+.budget-options a:hover{
+    text-decoration: none;
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+.transactions{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.transactions table{
+    width: 100%;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.transactions table tr td{
+    border: 1px solid white;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.amount{
+    width: 33%;
+}
+
+.separator{
+    color: #bbb;
+}
+
+footer{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: var(--header);
+  margin: 50% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-header{
+    display: flex;
+    margin-top: -10px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.modal-form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-form{
+    display: inline-block;
+}
+
+.modal-form input[type=text]{
+    display: inline-block;
+    border: 1px solid white;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 8px;
+    background: #cccccc;
+    box-sizing: border-box;
+}
+
+.modal-form #amount{
+    font-size: 30px;
+    width: 120px;
+    margin-left: 90px;
+}
+
+.modal-form #description{
+    width: 100%;
+    font-size: 15px;
+}
+
+.modal-submit{
+    display: flex;
+    justify-content: center;
+}
+.modal-submit a{
+    border: 1px solid white;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
+
+.modal-submit a:hover{
+    text-decoration: none;
+}
+
+label{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
