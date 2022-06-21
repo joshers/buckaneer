@@ -44,11 +44,13 @@ def display_transactions():
     f = '%Y-%m-%d %H:%M:%S'
     lastup = datetime.datetime.strptime(lastupdate, f)
     now = datetime.datetime.now()
-    delta = now - lastup
+    delta = now.date() - lastup.date()
     days = delta.days
     if days > 0:
         newbal = currentbal + (currentrate * days)
+        newupdate = now.strftime(f)
         conn.execute('UPDATE data SET currentbal = ? WHERE id = ?', (newbal, 1))
+        conn.execute('UPDATE data SET lastupdate = ? WHERE id = ?', (newupdate, 1))
         conn.commit()
         currentbal = conn.execute('SELECT currentbal FROM data WHERE id = 1').fetchone()[0]
     conn.close()
