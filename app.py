@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import sqlite3
 import datetime
 
@@ -25,6 +25,7 @@ def display_transactions():
             updatesql.execute('INSERT INTO transactions (detail, amount) VALUES (?, ?)', (desc, amount))
             updatesql.commit()
             updatesql.close()
+            return redirect("/", code=302)
         elif request.form.get('budget'):
             newbudget = request.form.get('budget')
             newrate = request.form.get('rate')
@@ -35,6 +36,7 @@ def display_transactions():
             updatesql.execute('UPDATE data SET rate = ? WHERE id = ?', (newrate, 1))
             updatesql.commit()
             updatesql.close()
+            return redirect("/", code=302)
 
     conn = get_db_connection()
     transactions = conn.execute('SELECT * FROM transactions ORDER BY id DESC LIMIT 5').fetchall()
